@@ -1,0 +1,129 @@
+---
+---
+
+:root {
+    --bg: #FFFFFF;
+    --text: #000000;
+    --accent: #999999;
+    --link: #7777FF;
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --bg: #080F10;
+        --text: #FFFFFF;
+        --accent: #AAAAAA;
+        --link: #7777FF;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+
+    color: var(--text);
+    background-color: var(--bg);
+
+    margin: 0;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    margin-top: 2em;
+    height: 10em;
+    border-radius: 2em;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 200;
+    margin: 0;
+    text-align: center;
+}
+
+.gray {
+    font-size: 2em;
+    color: var(--accent);
+    margin: 0;
+}
+
+.languages {
+    display: flex;
+    gap: 1em;
+
+    .flag {
+        height: 2.5em;
+    }
+}
+
+hr {
+    width: 90vw;
+    max-width: 25em;
+}
+
+.main-text {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--accent);
+
+    position: relative;
+
+    &::before {
+        content: '';
+        background-color: var(--link);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.1rem;
+        z-index: -1;
+        transition: height 0.3s ease-out, background 1s ease-in-out;
+    }
+    &:hover {
+        color: var(--text);
+
+        &::before {
+            height: 50%;
+            background-color: var(--link);
+        }
+    }
+}
+
+.sites {
+    display: flex;
+    gap: 2em;
+
+    .site {
+        height: 5em;
+        width: auto;
+        border-radius: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+        .square {
+            fill: var(--text);
+        }
+        .mask {
+            fill: var(--bg);
+        }
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .sites {
+        flex-direction: column;
+        gap: 0em;
+    }
+}
