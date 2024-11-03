@@ -1,18 +1,30 @@
 ---
 ---
 
-:root {
+html, html[data-theme="light"] {
     --bg: #FFFFFF;
     --text: #000000;
     --accent: #999999;
     --link: #7777FF;
 }
+html[data-theme="dark"] {
+    --bg: #080F10;
+    --text: #FFFFFF;
+    --accent: #AAAAAA;
+    --link: #7777FF;
+}
 
 @media (prefers-color-scheme: dark){
-    :root {
+    html, html[data-theme="dark"] {
         --bg: #080F10;
         --text: #FFFFFF;
         --accent: #AAAAAA;
+        --link: #7777FF;
+    }
+    html[data-theme="light"] {
+        --bg: #FFFFFF;
+        --text: #000000;
+        --accent: #999999;
         --link: #7777FF;
     }
 }
@@ -126,4 +138,17 @@ hr {
         flex-direction: column;
         gap: 0em;
     }
+}
+
+.mode-switcher {
+    display: grid;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.sun, .moon {
+    grid-column: 1;
+    grid-row: 1;
+    height: 4rem;
+    width: 4rem;
 }
