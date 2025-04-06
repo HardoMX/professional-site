@@ -145,9 +145,16 @@ hr {
     height: 4rem;
     width: 4rem;
     stroke: var(--secondary);
-    transition: stroke 0.3s ease;
+    transition: stroke 0.3s ease, fill 0.3s ease;
 
     &:hover {
         stroke: var(--link);
+    }
+}
+.moon {
+    fill: var(--secondary);
+
+    &:hover {
+        fill: var(--link);
     }
 }
