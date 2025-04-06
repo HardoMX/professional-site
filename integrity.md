@@ -6,29 +6,25 @@ title: Integrity
 
 # Integrity
 
-## I like cookies, but I also don't like cookies, and you probably agree.
-While cookies in the form of a tasty confection are amazing, cookies on the web are generally less so. 
-**That's why I avoid them on my sites.**
+## Cookies?
+Cookies can be amazingly useful on the web, but they can also be used to track you across the internet.
+**That's why I avoid them on my sites.** In fact, I only have one cookie, which is used to store your preference of light or dark mode.
 
 ---
 
-## But what is a cookie?
+## What is a cookie?
 A cookie is a small piece of text that gets stored locally on your computer. This can be used for things like automatic login, a shopping cart, or tracking you.
-Companies like Google and Meta (formerly Facebook) offer statistics and advertisements with the help of their cookies. <br />
-These cookeis which are from someone other than the owner of the site is called third-party cookies, and just like in real life, they are worse than the homemade kind.
+Companies like Google and Meta (formerly Facebook) offer statistics and advertisements with the help of their cookies.
+
+These cookies which are from someone other than the owner of the site is called third-party cookies, and just like in real life, they are worse than the homemade kind.
 Third-party cookies allow companies like Google and Meta to track you throughout the web by seeing your unique cookie on the sites that use their statistics and advertisement services.
-Nowadays companies have many other ways to track you, but cookies are still a part of it.
+
+Nowadays there are many other ways to track you, but cookies are still a part of it.
 
 ---
 
-## So why don't I see a cookie pop-up on your sites?
-The only form of client-side storage I use is the `document.localStorage` API in JavaScript, and all it does is store your theme preference.
-I also currently don't care much for statistics, and when I do, they will be implemented in a privacy focused way, without Google or Meta.
-
----
-
-## I want to know more about cookies and privacy!
-**Great!** Here are some good sources to read up on cookies:
+## Want to know more about cookies and privacy?
+Here are some good sources to read up on cookies:
 - [en.wikipedia.org](https://en.wikipedia.org/wiki/HTTP_cookie)
 - [www.cloudflare.com](https://www.cloudflare.com/learning/privacy/what-are-cookies/)
 - [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/Privacy/Third-party_cookies)
