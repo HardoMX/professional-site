@@ -12,19 +12,26 @@ img {
 .sites {
     display: flex;
     gap: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 
     .site {
         height: 5em;
         width: auto;
         border-radius: 1em;
-        margin-top: 1em;
-        margin-bottom: 1em;
 
         .square {
             fill: var(--text);
+            transition: fill ease .3s;
         }
         .mask {
             fill: var(--bg);
+        }
+
+        &:hover {
+            .square {
+                fill: var(--secondary)
+            }
         }
     }
 }

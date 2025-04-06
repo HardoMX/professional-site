@@ -3,12 +3,14 @@ html, html[data-theme="light"] {
     --text: #000000;
     --accent: #999999;
     --link: #7777FF;
+    --secondary: #1C274C;
 }
 html[data-theme="dark"] {
     --bg: #080F10;
     --text: #FFFFFF;
     --accent: #AAAAAA;
     --link: #7777FF;
+    --secondary: #1C274C;
 }
 
 @media (prefers-color-scheme: dark){
@@ -17,12 +19,14 @@ html[data-theme="dark"] {
         --text: #FFFFFF;
         --accent: #AAAAAA;
         --link: #7777FF;
+        --secondary: #1C274C;
     }
     html[data-theme="light"] {
         --bg: #FFFFFF;
         --text: #000000;
         --accent: #999999;
         --link: #7777FF;
+        --secondary: #1C274C;
     }
 }
 
@@ -80,6 +84,15 @@ p {
     .flag {
         height: 2.5em;
     }
+
+    .inactive {
+        filter: grayscale(1);
+        transition: filter 0.3s ease;
+
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
 }
 
 hr {
@@ -131,4 +144,10 @@ hr {
     grid-row: 1;
     height: 4rem;
     width: 4rem;
+    stroke: var(--secondary);
+    transition: stroke 0.3s ease;
+
+    &:hover {
+        stroke: var(--link);
+    }
 }
